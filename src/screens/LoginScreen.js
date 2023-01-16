@@ -18,6 +18,7 @@ import { useState } from "react";
 import { URL_BASE } from "../config/URL_BASE";
 
 export default function LoginScreen({ navigation }) {
+  const [staff,setStaff]=useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(true);
@@ -34,7 +35,7 @@ export default function LoginScreen({ navigation }) {
     const url = `${URL_BASE}/auth/login/`;
     var data = {
       email: email,
-      password: password,
+      password: password
     };
     const response = await fetch(url, {
       method: "POST", // or 'PUT'
@@ -49,8 +50,8 @@ export default function LoginScreen({ navigation }) {
     if (respuesta.email === email && respuesta.token ) {
       await SecureStore.setItemAsync("token", respuesta.token);
       await SecureStore.setItemAsync("email", respuesta.email);
-
-      navigation.navigate("Inside");
+      respuesta.is_staff===true&&setStaff(true)
+      navigation.navigate("Inside",{staff:staff});
     } else {
       alert(respuesta.email);
     }

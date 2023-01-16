@@ -43,9 +43,7 @@ export default function Recuperarcontrasena({ navigation }) {
   return (
     <>
       <ScrollView contentContainerStyle={styles.mainContainer}>
-        <View
-          style={{ backgroundColor: "#FFCC00", flex: 1, padding: 18 }}
-        ></View>
+        <View style={{ backgroundColor: "#FFCC00", padding: 18 }}></View>
         <View>
           <View style={styles.containerIm}>
             <Image
@@ -91,6 +89,7 @@ export default function Recuperarcontrasena({ navigation }) {
 const styles = StyleSheet.create({
   mainContainer: {
     backgroundColor: "#ffffff",
+    flex:1,
   },
   container1: {
     flex: 1,

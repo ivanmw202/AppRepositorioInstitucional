@@ -10,6 +10,9 @@ import InsideContainer from "./InsideContainer";
 import RecuperarContrasena from "../screens/Recuperarcontrasena";
 import CambioDeContrasena from "../screens/CambioDeContrasena";
 import VerificarCodigo from "../screens/VerficarCodigo"
+import RegisterVerify from "../screens/RegisterVerify";
+import AddFile from "../screens/AddFile";
+import AddAutor from "../screens/AddAutor"
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function MainContainer() {
@@ -33,6 +36,11 @@ export default function MainContainer() {
             options={{ headerShown: false }}
           />
           <Stack.Screen
+            name="RegisterVerify"
+            component={RegisterVerify}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
             name="Detail"
             component={BookDetail}
             options={{ headerShown: false }}
@@ -50,6 +58,16 @@ export default function MainContainer() {
           <Stack.Screen
             name="Verificarcodigo"
             component={VerificarCodigo}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="AddFile"
+            component={AddFile}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="AddAutor"
+            component={AddAutor}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

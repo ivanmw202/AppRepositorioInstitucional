@@ -51,8 +51,10 @@ export default function LoginScreen({navigation}) {
     console.log(respuesta.status);
     if (respuesta.status === 'success') {
       setStatus('success');
+      navigation.navigate("RegisterVerify")
       cleanInputs();
     } else {
+      
       setStatus('failed');
       cleanInputs();
     }
@@ -91,7 +93,7 @@ export default function LoginScreen({navigation}) {
           onChangeText={(text) => setLast_name(text)}
         />
         <TextInput
-          placeholder="Apellido Paterno"
+          placeholder="Apellido Materno"
           style={styles.input}
           label="Apellido_paterno"
           autoCapitalize="none"
