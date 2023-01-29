@@ -120,18 +120,7 @@ const AddAutor = () => {
               </LinearGradient>
             </TouchableOpacity>
 
-            <TouchableOpacity
-              Styles={styles.containerIN}
-            >
-              <LinearGradient
-                // Button Linear Gradient
-                colors={['#FFCC00', '#685B96', '#7A4780']}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 1 }}
-                style={styles.buttonIN}>
-                <Text style={styles.textIN}>INICIAR SESION</Text>
-              </LinearGradient>
-            </TouchableOpacity>
+          
           </SafeAreaView>
         </View>
       </ScrollView>
